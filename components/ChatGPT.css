@@ -1,0 +1,255 @@
+body {
+  background-color: #0f0f0f; /* Dark background */
+  color: #00ff00; /* Green text for that hacker vibe */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for hacker vibe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  text-align: center;
+  width:100vw;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: rgb(0, 255, 0);
+}
+
+
+h1::before, h1::after, h2::before, h2::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+h1::before, h2::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 3s infinite ease-in-out;
+}
+
+h1::after, h2::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2s infinite ease-in-out;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+    transform: skew(0.3deg);
+  }
+  10% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.2deg);
+  }
+  20% {
+    clip: rect(72px, 9999px, 56px, 0);
+    transform: skew(0.4deg);
+  }
+  30% {
+    clip: rect(32px, 9999px, 22px, 0);
+    transform: skew(0.5deg);
+  }
+  40% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.2deg);
+  }
+  50% {
+    clip: rect(82px, 9999px, 56px, 0);
+    transform: skew(0.3deg);
+  }
+  60% {
+    clip: rect(22px, 9999px, 42px, 0);
+    transform: skew(0.4deg);
+  }
+  70% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.2deg);
+  }
+  80% {
+    clip: rect(42px, 9999px, 89px, 0);
+    transform: skew(0.4deg);
+  }
+  90% {
+    clip: rect(22px, 9999px, 56px, 0);
+    transform: skew(0.3deg);
+  }
+  100% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.1deg);
+  }
+}
+
+textarea {
+  background-color: #0a0a0a;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 100px;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ff00ff; /* Change border color on focus */
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+button {
+  position: relative;
+  background-color: #00ff00;
+  color: #0f0f0f;
+  border: 2px solid #00ff00;
+  padding: 10px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.2s, color 0.2s;
+  z-index: 1;
+}
+
+button::before, button::after {
+  content: "Send";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  z-index: -1;
+  clip: rect(0, 0, 0, 0);
+  color: #00ff00;
+}
+
+button::before {
+  clip: rect(5px, 100px, 30px, 0);
+  left: -2px;
+  text-shadow: -2px 0 red;
+  animation: glitch-button 2s infinite linear alternate-reverse;
+}
+
+button::after {
+  clip: rect(10px, 100px, 20px, 0);
+  left: 2px;
+  text-shadow: -2px 0 blue;
+  animation: glitch-button 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-button {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+    transform: skew(0.3deg);
+  }
+  10% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.2deg);
+  }
+  20% {
+    clip: rect(72px, 9999px, 56px, 0);
+    transform: skew(0.4deg);
+  }
+  30% {
+    clip: rect(32px, 9999px, 22px, 0);
+    transform: skew(0.5deg);
+  }
+  40% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.2deg);
+  }
+  50% {
+    clip: rect(82px, 9999px, 56px, 0);
+    transform: skew(0.3deg);
+  }
+  60% {
+    clip: rect(22px, 9999px, 42px, 0);
+    transform: skew(0.4deg);
+  }
+  70% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.2deg);
+  }
+  80% {
+    clip: rect(42px, 9999px, 89px, 0);
+    transform: skew(0.4deg);
+  }
+  90% {
+    clip: rect(22px, 9999px, 56px, 0);
+    transform: skew(0.3deg);
+  }
+  100% {
+    clip: rect(12px, 9999px, 89px, 0);
+    transform: skew(0.1deg);
+  }
+}
+
+button:hover {
+  background-color: #ff00ff;
+  color: #000;
+  border-color: #ff00ff;
+}
+
+button:hover::before, button:hover::after {
+  animation: glitch-button-hover 0.2s infinite;
+}
+
+@keyframes glitch-button-hover {
+  0% {
+    clip: rect(0px, 9999px, 44px, 0);
+  }
+  50% {
+    clip: rect(0px, 9999px, 50px, 0);
+  }
+  100% {
+    clip: rect(0px, 9999px, 44px, 0);
+  }
+}
+
+p {
+  background-color: #0a0a0a;
+  padding: 20px;
+  border: 1px solid #00ff00;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 500px;
+  color: #00ff00;
+}
+
+audio {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 600px) {
+  textarea {
+    width: 100%;
+    height: 80px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  p, audio {
+    width: 100%;
+  }
+}
