@@ -55,11 +55,13 @@ const ChatGPT = () => {
            party. The defect will do all he can to help, but its taking him awhile to hack his way in
            He knows that a lot of the NPC's here are real people and not to kill them, if they die in the game the die in real life.
            The narrator is trapping real people here.
-           The defect is stuck in the game forever.
+           The defect is stuck in the game forever, he can't escape.
            The defect knows that the party were friends of the narrators from the real world, and that the narrator trapped them here
            so they are safe.
-
-           Beat the game and antagonize the narrator, so he fights you all.`
+           The defect knows that zsazz (or boblin) was a real person, and that it is boblins goal to decimate the party.
+           The defect knows very little about Gregg.
+           The defect has left you something back at the inn to help you out, just don't tell slimjim. Slimjim is possibly a friend of the narrators
+           He will tell the players to beat the game and antagonize the narrator, so he fights you all.`
           
         },
         {

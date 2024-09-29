@@ -116,10 +116,10 @@ export default function Home(){
                 Hello Friends             
                 </div>
                 <div data-text="He Doesn't know We are HeRe  "className={styles.title_text}>   
-                         He Doesn't know We are HeRe    
+                         He Doesn^t know We are HeRe    
                 </div>
                 <h1 data-text="W e should talk, but first prove that it's you .">   
-                         We should talk, but first prove that it's you 
+                         We should talk, but first prove that it^s you 
                 </h1>
             </div>
             
