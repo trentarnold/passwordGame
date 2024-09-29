@@ -8,8 +8,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/react'
 import styles from './page.module.css'
 import PasswordBox from "../components/PasswordBox";
 import RuleBox from "../components/RuleBox";
-
-
+import ChatGPT from '@/components/ChatGPT';
 
 import ruleList, {sort_rules} from "../rules/rules";
 
@@ -24,7 +23,6 @@ export default function Home(){
     const pswdBoxRef = useRef(null);
     const [aaParent, aaEnableAnimations] = useAutoAnimate();
     const [allSolved, setAllSolved] = useState(false);
-
 
     // initialization rule numbers
     useEffect(() => {
@@ -109,18 +107,20 @@ export default function Home(){
 
     return (
         <>
+        {allSolved === false ? 
         <div className={styles.container}>
             
             <div className={styles.title}>
-                <Image
-                    src="/quirkylock_purple.png"
-                    width={55}
-                    height={55}
-                    alt=""
-                />
-                <div className={styles.title_text}>                
-                    QuirkyLock
+                <div></div>
+                <div className={styles.title_text}>   
+                Hello Friends             
                 </div>
+                <div data-text="He Doesn't know We are HeRe  "className={styles.title_text}>   
+                         He Doesn't know We are HeRe    
+                </div>
+                <h1 data-text="W e should talk, but first prove that it's you .">   
+                         We should talk, but first prove that it's you 
+                </h1>
             </div>
             
                         
@@ -147,12 +147,9 @@ export default function Home(){
             </div>
 
         </div>
-        <footer className={styles.footer}>
-            Check out the <a href="https://github.com/sayantanDs/quirkylock" target="_blank">GitHub</a> for this project. <br/>
-            This site is heavily inspired by&nbsp;
-            <a href="https://neal.fun/password-game/" target="_blank">The Password Game</a> by&nbsp;
-            <a href="https://twitter.com/nealagarwal" target="_blank">Neal</a>
-        </footer>
+        : 
+        <ChatGPT></ChatGPT>  
+        } 
         </>
       )
 }

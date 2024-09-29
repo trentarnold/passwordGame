@@ -8,7 +8,7 @@ const morse = {
 
 export default class RuleMorse extends Rule{
     constructor(){
-        super("Your password must contain the Morse code of the first 3 english alphabets in your password. (Use . and -)");
+        super("Your password must contain the Morse code of the first 3 letters in your password. (Use . and -)");
     }
 
     check(txt){
@@ -16,7 +16,7 @@ export default class RuleMorse extends Rule{
         if(letters?.length===3)
         {
             let code = `${morse[letters[0].toLowerCase()]} ${morse[letters[1].toLowerCase()]} ${morse[letters[2].toLowerCase()]}`;
-            
+            console.log('CODE', code)
             let exp = `${code}`;
             exp = exp.replaceAll(".", "\\.");
             console.log("morse:", exp);

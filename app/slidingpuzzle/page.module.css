@@ -2,7 +2,7 @@
     width: 576px;
     max-width: calc(100% - 20px);
     margin: 0 auto;
-    color: #4e4e4e;
+    color: #000000;
     min-height: calc(100vh - 50px);
     text-align: center;
 }
@@ -13,7 +13,7 @@
 .buttons>button{
 
     margin: 5px 5px 5px 5px;
-    background-color: #FFFFFF;
+    background-color: #c01818;
     border: 0;
     border-radius: .5rem;
     box-sizing: border-box;

@@ -11,77 +11,96 @@ import RuleEarthquake from "./RuleEarthquake/RuleEarthquake";
 
 
 var rules = [
-    new Rule( 
+    new Rule(
         "Your password must be at least 6 characters.",
-        (t) => t?.length >= 6
+        ( t ) => t?.length >= 6
     ),
-    new Rule( 
+    new Rule(
         "Your password must include an uppercase and a lowercase letter.",
-        (t) => (/[A-Z]/.test(t) && /[a-z]/.test(t))
+        ( t ) => ( /[A-Z]/.test( t ) && /[a-z]/.test( t ) )
     ),
-    new Rule( 
-        "Your password must include a special character.",
-        (t) => /\W/.test(t)
-    ),
-    new Rule( 
-        "Your password must include a negative number.",
-        (t) => /-\d/.test(t)
-    ),
-    new Rule( 
-        "Your password must contain all the english vowels.",
-        (t) => /a/i.test(t) && /e/i.test(t) && /i/i.test(t) && /o/i.test(t) && /u/i.test(t)
-    ),
-    new Rule(
-        "Your password must include 2-digit prime number.",
-        (t) => /(?:11)|(?:13)|(?:17)|(?:19)|(?:23)|(?:29)|(?:31)|(?:37)|(?:41)|(?:43)|(?:47)|(?:53)|(?:59)|(?:61)|(?:67)|(?:71)|(?:73)|(?:79)|(?:83)|(?:89)|(?:97)/.test(t)
-    ),
-    new RuleSum(),
-    new Rule( 
-        "Your password must include the name of \"The power house of the cell\". \u{1F9A0}", //&#x1F9A0;
-        (t) => /(?:mitochondria)|(?:mitochondrion)/i.test(t)
-    ),
-    new Rule( 
-        "Your password must include the name of a continent.",
-        (t) => /asia|europe|africa|australia|oceania|north america|south america|antarctica/i.test(t)
-    ),
-    new Rule( 
-        "Your password must contain the value of pi up to first 5 decimal places.",
-        (t) => /(?:3\.14159)/.test(t)
-    ),    
-    
-    new RuleTimeEmoji(),
-    new RuleWordle(),
-    new RuleEarthquake(),
-    new RuleQR(),
-    new RuleMorse(),
-    new RuleLocation(),
-    new RuleRiddle(),
-    new Rule(
-        "Your password must have as many vowels as consonants.",
-        (t) => (t.match(/[aeiou]/ig) || []).length === (t.match(/[bcdfghjklmnpqrstvwxys]/ig) || []).length
-    ),
-    new RuleSlidingPuzzle(),
-    new Rule(
-        "Your password must include the length of your password.",
-        (t) => {
-            let l = t.length;
-            let r = new RegExp(`${l}`);
-            return r.test(t);
-        }
-    )
+    // new Rule(
+    //     "Your password must include the name of Astarion's old master.", //&#x1F9A0;
+    //     ( t ) => /(?:Cazador)|(?:Cazador)/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include a special character.",
+    //     ( t ) => /\W/.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include Cheese Eaters favorite cheese.", //&#x1F9A0;
+    //     ( t ) => /(?:elvish)|(?:elvish)/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include a negative number.",
+    //     ( t ) => /-\d/.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must contain all the english vowels.",
+    //     ( t ) => /a/i.test( t ) && /e/i.test( t ) && /i/i.test( t ) && /o/i.test( t ) && /u/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include 2-digit prime number.",
+    //     ( t ) => /(?:11)|(?:13)|(?:17)|(?:19)|(?:23)|(?:29)|(?:31)|(?:37)|(?:41)|(?:43)|(?:47)|(?:53)|(?:59)|(?:61)|(?:67)|(?:71)|(?:73)|(?:79)|(?:83)|(?:89)|(?:97)/.test( t )
+    // ),
+    // new RuleSum(),
+    // new Rule(
+    //     "Your password must include the name of \"The power house of the cell\". \u{1F9A0}", //&#x1F9A0;
+    //     ( t ) => /(?:mitochondria)|(?:mitochondrion)/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include the name of a continent.",
+    //     ( t ) => /asia|europe|africa|australia|oceania|north america|south america|antarctica/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include Bathe's god.", //&#x1F9A0;
+    //     ( t ) => /(?:lathander)|(?:lathander)/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must contain the value of pi up to first 5 decimal places.",
+    //     ( t ) => /(?:3\.14159)/.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include tobeys full name.", //&#x1F9A0;
+    //     ( t ) => /(?:Tobleroberleron Smith)|(?:Tobleroberleron Smith)/i.test( t )
+    // ),
+    // new RuleTimeEmoji(),
+    // new RuleWordle(),
+    // new RuleEarthquake(),
+    // new RuleQR(),
+    // new RuleMorse(),
+    // new RuleLocation(),
+    // new RuleRiddle(),
+    // new Rule(
+    //     "Your password must have as many vowels as consonants.",
+    //     ( t ) => ( t.match( /[aeiou]/ig ) || [] ).length === ( t.match( /[bcdfghjklmnpqrstvwxys]/ig ) || [] ).length
+    // ),
+    // new RuleSlidingPuzzle(),
+    // new Rule(
+    //     "Your password must include Kallisto's fiances name.", //&#x1F9A0;
+    //     ( t ) => /(?:Estella)|(?:Estella)/i.test( t )
+    // ),
+    // new Rule(
+    //     "Your password must include the length of your password.",
+    //     ( t ) => {
+    //         let l = t.length;
+    //         let r = new RegExp( `${l}` );
+    //         return r.test( t );
+    //     }
+    // )
 ];
 
-function sort_rules(a, b){
-    if(a.correct == b.correct){
+function sort_rules ( a, b ) {
+    if ( a.correct == b.correct ) {
         return b.num - a.num;
     }
-    else if(!a.correct && b.correct){
+    else if ( !a.correct && b.correct ) {
         return -1;
     }
-    else{
+    else {
         return 1;
     }
 }
 
 export default rules;
-export {sort_rules};
+export { sort_rules };

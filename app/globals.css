@@ -1,6 +1,6 @@
 body {
-    background-color: #fffaff;
-    color: #0A0F0D;
+    background-color: #baf9ba;
+    color: #000000;
     font-family: 'Roboto Mono', 'Consolas', monospace, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -8,18 +8,18 @@ body {
     
     /* halftone */
     /* https://css-irl.info/css-halftone-patterns/ */
-    --color: #fff0ff;
-    --dotSize: 0.25rem;
+    /* --color: #b9b9b9;
+    --dotSize: 0.5rem;
     --bgSize: 1.35rem;
-    --bgPosition: calc(var(--bgSize) / 2);
+    --bgPosition: calc(var(--bgSize) / 2); */
 
-    background-image: radial-gradient(
+    /* background-image: radial-gradient(
         circle at center,
         var(--color) var(--dotSize),
         transparent 0
         ), radial-gradient(circle at center, var(--color) var(--dotSize), transparent 0);
     background-size: var(--bgSize) var(--bgSize);
-    background-position: 0 0, var(--bgPosition) var(--bgPosition);
+    background-position: 0 0, var(--bgPosition) var(--bgPosition); */
     
 }
 

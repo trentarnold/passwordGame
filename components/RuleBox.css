@@ -4,16 +4,13 @@
     font-size: 16px;
     margin: 22px auto;
     overflow: hidden;
-
+    color: black;
     /* background-color: #ffdce0; */
     background-color: #ffeced;
     border: 2px solid #CE273D;
-    box-shadow: 8px 8px 1px 0px rgba(222, 184, 189, 0.4);
+    box-shadow: 8px 8px 1px 0px rgba(205, 20, 20, 0.4);
 
     transition: background-color 0.5s;
-}
-.rulebox:hover {
-    box-shadow: 10px 10px 1px 0px rgba(222, 184, 189, 0.5);
 }
 .rulebox-top {
     padding: 5px 16px 8px 8px;
@@ -33,10 +30,7 @@
 .rulebox.rule-correct {
     background-color: #deffce;
     border: 2px solid #52A22A;
-    box-shadow: 8px 8px 1px 0px rgba(167, 187, 157, 0.4);
-}
-.rulebox.rule-correct:hover {
-    box-shadow: 10px 10px 1px 0px rgba(167, 187, 157, 0.5);
+    box-shadow: 8px 8px 1px 0px rgba(192, 248, 164, 0.4);
 }
 .rulebox-top.rule-correct {
     background-color: #b4ea99;
